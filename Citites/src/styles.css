@@ -1,0 +1,33 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+}
+
+.city-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.city-container .city-list,
+.city-container .city-details {
+  width: 49%;
+}
+
+.cityListItem:hover {
+  cursor: pointer;
+  background: whitesmoke;
+}
+
+.listItemHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-width {
+  width: 100%;
+}
+.city-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}

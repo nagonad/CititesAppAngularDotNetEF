@@ -1,0 +1,101 @@
+<div class="city-container">
+  <div class="city-list">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title> City List </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <div
+            class="cityListItem"
+            *ngFor="let city of Cities"
+            (click)="selectCity(city)"
+          >
+            <div class="listItemHeader">
+              <h2 matline>{{ city.name }}</h2>
+              <button
+                (click)="deleteCity(city.id)"
+                mat-icon-button
+                color="warn"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            <h4>Population: {{ city.population }}</h4>
+            <h4>Longitude: {{ city.longitude }}</h4>
+            <h4>Latitude: {{ city.latitude }}</h4>
+          </div>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="city-details">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <span *ngIf="selectedCity.id > 0; else elseBlock">
+            {{ originalName | titlecase }}
+          </span>
+          <ng-template #elseBlock>Select a City</ng-template>
+        </mat-card-title>
+      </mat-card-header>
+      <form #form="ngForm" (submit)="saveCity(selectedCity)">
+        <mat-card-content>
+          <mat-form-field class="full-width">
+            <mat-label>City Name</mat-label>
+            <input
+              name="name"
+              matInput
+              type="text"
+              required=""
+              [(ngModel)]="selectedCity.name"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Population</mat-label>
+            <input
+              name="population"
+              matInput
+              type="number"
+              required=""
+              [(ngModel)]="selectedCity.population"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Longitude</mat-label>
+            <input
+              name="longitude"
+              matInput
+              type="text"
+              required=""
+              [(ngModel)]="selectedCity.longitude"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Latitude</mat-label>
+            <input
+              name="latitude"
+              matInput
+              type="text"
+              required=""
+              [(ngModel)]="selectedCity.latitude"
+            />
+          </mat-form-field>
+        </mat-card-content>
+        <div class="city-button-container">
+          <button mat-flat-button type="button" color="warn" (click)="clearForm()">
+            Cancel
+          </button>
+          <button
+            mat-flat-button
+            color="primary"
+            type="submit"
+            [disabled]="form.invalid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

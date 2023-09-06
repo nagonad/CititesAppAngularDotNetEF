@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Citites", "Citites\Citites.esproj", "{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesAPI", "CitiesAPI\CitiesAPI.csproj", "{5FD02666-CEBA-44EF-8406-DDABAD4BA59C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE46D5D5-F5EC-4309-9D84-FF7193A869C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5FD02666-CEBA-44EF-8406-DDABAD4BA59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD02666-CEBA-44EF-8406-DDABAD4BA59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD02666-CEBA-44EF-8406-DDABAD4BA59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD02666-CEBA-44EF-8406-DDABAD4BA59C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97F45343-92A3-4D19-8038-BE84336D803E}
+	EndGlobalSection
+EndGlobal
